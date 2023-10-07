@@ -2,12 +2,16 @@
 import React from 'react'
 import styles from './style.module.scss';
 
-export default function Project({index, title, setModal}) {
+export default function Project({index, title, manageModal}) {
 
-    return (
-        <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
-            <h2>{title}</h2>
-            <p>Design & Development</p>
-        </div>
-    )
+  return (
+    <div 
+      onMouseEnter={(e) => {manageModal(true, index, e.clientX, e.clientY)}} 
+      onMouseLeave={(e) => {manageModal(false, index, e.clientX, e.clientY)}} 
+      className={styles.project}
+    >
+      <h2>{title}</h2>
+      <p>Design & Development</p>
+    </div>
+  )
 }

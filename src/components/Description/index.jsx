@@ -2,6 +2,8 @@ import styles from './style.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './anim';
+import Rounded from '../../common/RoundedButton';
+
 export default function Description() {
 
     const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
@@ -31,11 +33,16 @@ export default function Description() {
             )})
           }
           </p>
-          <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
+          <motion.p 
+            variants={opacity} 
+            animate={isInView ? "open" : "closed"}
+          >
+            The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
+          </motion.p>
           <div data-scroll data-scroll-speed={0.1}>
-            <div className={styles.button}>
+            <Rounded className={styles.button}>
               <p>About me</p>
-            </div>
+            </Rounded>
           </div>
         </div>
       </div>

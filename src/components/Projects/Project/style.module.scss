@@ -7,31 +7,32 @@
   border-top: 1px solid rgb(201, 201, 201);
   cursor: pointer;
   transition: all 0.2s;
-}
-.project:last-of-type{
-  border-bottom: 1px solid rgb(201, 201, 201);
-}
 
-.project:hover{
-  opacity: 0.5;
-}
+  h2{
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 400;
+    transition: all 0.4s;
+  }
 
-.project:hover h2{
-  transform: translateX(-10px);
-}
+  p{
+    transition: all 0.4s;
+    font-weight: 300;
+  }
 
-.project:hover p{
-  transform: translateX(10px);
-}
+  &:last-of-type{
+    border-bottom: 1px solid rgb(201, 201, 201);
+  }
 
-.project h2{
-  font-size: 60px;
-  margin: 0px;
-  font-weight: 400;
-  transition: all 0.4s;
-}
+  &:hover{
+    opacity: 0.5;
 
-.project p{
-  transition: all 0.4s;
-  font-weight: 300;
+    h2{
+        transform: translateX(-10px);
+    }
+
+    p{
+        transform: translateX(10px);
+    }
+  }
 }
